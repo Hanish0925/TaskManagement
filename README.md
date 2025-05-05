@@ -41,43 +41,50 @@ A collaborative task tracking backend built with **Node.js**, **Express**, **Mon
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the repository
+### Installation
+1. Clone the repository:
 
-```bash
+```sh
 git clone <your-repo-url>
 cd task-tracker-backend
+```
 
-### 2. Set up `.env`
+2. Set up `.env`:
 
 Create a `.env` file in the root directory and add the following:
 
-```env
+```sh
 PORT=5000
 MONGO_URI=<Your MongoDB Atlas Connection String>
 JWT_SECRET=your_jwt_secret_key
+```
 
-### 3. Run redis,kafka and zookeeper via docker
+3. Run redis,kafka and zookeeper via docker
 
 Start services using the command
 
-```bash
+```sh
 docker-compose up -d
 
 check containers using
+```
 
-```bash
+```sh
 docker ps
+```
 
-### 4. Start the backend server
+4. Start the backend server
 
-```bash
+```sh
 npm install 
 npm run dev 
+```
 
-### 5. Start kafka notification Consumer
+5. Start kafka notification Consumer
 
-```bash
+```sh
 node kafka/consumers/taskNotificationConsumer.js
+```
 
 ## 🧪 API Testing with Postman
 
@@ -95,6 +102,7 @@ Use JWT authentication for protected routes:
   "email": "alice@example.com",
   "password": "password123"
 }
+```
 
 ### Login
 
@@ -105,6 +113,7 @@ Use JWT authentication for protected routes:
   "email": "alice@example.com",
   "password": "password123"
 }
+```
 
 ### Get Profile 
 
@@ -125,6 +134,7 @@ Add Authorization header with Bearer token
   "priority": "High",
   "status": "open"
 }
+```
 
 ### Search and Filter Tasks
 
@@ -138,6 +148,7 @@ Add Authorization header with Bearer token
 {
   "status": "completed"
 }
+```
 
 ### Update Task 
 
@@ -148,6 +159,7 @@ Add Authorization header with Bearer token
   "title": "Design Homepage v2",
   "description": "Update UI based on feedback"
 }
+```
 
 ### Delete Task 
 
@@ -161,6 +173,7 @@ Add Authorization header with Bearer token
 {
   "content": "Please review this section"
 }
+```
 
 ### Upload Attachment
 
