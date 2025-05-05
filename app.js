@@ -27,3 +27,5 @@ app.use('/uploads', express.static('uploads'));
 app.get('/', (req, res) => res.send('API running'));
 
 export default app; 
+
+// change my code for more optimization
